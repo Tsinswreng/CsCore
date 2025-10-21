@@ -1,7 +1,7 @@
 namespace Tsinswreng.CsCore;
 
 [AttributeUsage(AttributeTargets.All)]
-public  partial class Impl : Attribute{
+public partial class Impl : Attribute{
 	public Type? IF { get; }
 	public Type[]? Types{get;set;}
 	public Impl(Type? IF = null) {

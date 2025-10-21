@@ -17,6 +17,7 @@ global using f32 = System.Single;
 global using f64 = System.Double;
 global using str = System.String;
 global using nil = System.Object;
+global using obj = System.Object;
 
 global using CT = System.Threading.CancellationToken;
 
