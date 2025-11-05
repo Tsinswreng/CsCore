@@ -1,6 +1,9 @@
 namespace Tsinswreng.CsCore;
 
 
+/// <summary>
+/// 不建議單獨叶此接口。璫叶IDictSerializable
+/// </summary>
 public partial interface I_ToSerialized{
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_0_OR_GREATER || NET5_0_OR_GREATER
 	//pure fn
@@ -10,6 +13,9 @@ public partial interface I_ToSerialized{
 #endif
 }
 
+/// <summary>
+/// 不建議單獨叶此接口。璫叶IDictSerializable
+/// </summary>
 public partial interface I_ToDeSerialized{
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_0_OR_GREATER || NET5_0_OR_GREATER
 	//pure fn
