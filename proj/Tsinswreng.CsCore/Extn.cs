@@ -54,7 +54,7 @@ public static class Extn{
 	/// <returns></returns>
 	public static bool Eq<TEnum>(
 		this TEnum z,
-		TEnum o
+		TEnum? o
 	)where TEnum : struct, Enum
 	{
 		return z.Equals(o);
@@ -96,5 +96,14 @@ public static class Extn{
 		return z ?? IAsyncEnumerable<T>.Empty();
 	}
 #endif
+
+	extension<K,V>(IDictionary<K,V> z){
+		public V GetValueOrDefault(K key, V defaultValue){
+			if(z.TryGetValue(key, out var value)){
+				return value;
+			}
+			return defaultValue;
+		}
+	}
 
 }
