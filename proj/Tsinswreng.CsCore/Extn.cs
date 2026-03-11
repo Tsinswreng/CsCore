@@ -1,19 +1,20 @@
 namespace Tsinswreng.CsCore;
 using System.Collections;
 
-
-/// <summary>
 /// Most used extension
-/// </summary>
 public static class Extn{
 	extension<TArg, TRtn>(TArg){
 		public static TRtn operator|(TArg Arg, Func<TArg, TRtn> Fn){
 			return Fn(Arg);
 		}
 	}
-	public static void AddRange<T>(this ICollection<T> list, IEnumerable<T> items) {
-		foreach (var item in items) {
-			list.Add(item);
+	public static void AddRange<T>(this ICollection<T> List, IEnumerable<T> Items) {
+		if(List is List<T> l){
+			l.AddRange(Items);
+			return;
+		}
+		foreach (var item in Items) {
+			List.Add(item);
 		}
 	}
 	public static void Sort<T>(this IList<T> list, Comparison<T> comparison){
@@ -45,13 +46,7 @@ public static class Extn{
 	}
 
 
-	/// <summary>
 	/// Case sensitive
-	/// </summary>
-	/// <typeparam name="TEnum"></typeparam>
-	/// <param name="z"></param>
-	/// <param name="o"></param>
-	/// <returns></returns>
 	public static bool Eq<TEnum>(
 		this TEnum z,
 		TEnum? o
@@ -60,13 +55,7 @@ public static class Extn{
 		return z.Equals(o);
 	}
 
-	/// <summary>
 	/// Case sensitive
-	/// </summary>
-	/// <typeparam name="TEnum"></typeparam>
-	/// <param name="z"></param>
-	/// <param name="o"></param>
-	/// <returns></returns>
 	public static bool Eq<TEnum>(
 		this TEnum z,
 		str o

@@ -1,9 +1,7 @@
 namespace Tsinswreng.CsCore;
 
 
-/// <summary>
 /// 不建議單獨叶此接口。璫叶IDictSerializable
-/// </summary>
 public partial interface I_ToSerialized{
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_0_OR_GREATER || NET5_0_OR_GREATER
 	//pure fn
@@ -13,9 +11,7 @@ public partial interface I_ToSerialized{
 #endif
 }
 
-/// <summary>
 /// 不建議單獨叶此接口。璫叶IDictSerializable
-/// </summary>
 public partial interface I_ToDeSerialized{
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_0_OR_GREATER || NET5_0_OR_GREATER
 	//pure fn
@@ -33,10 +29,7 @@ public partial interface IDictSerializable
 }
 
 
-/// <summary>
 /// 自封裝之值類型需叶斯接口、㕥便序列化時免包一層{"Value": xxx}
-/// </summary>
-/// <typeparam name="T"></typeparam>
 public partial interface I_ValueObj{
 	public obj? ValueObj{get;set;}
 #if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_0_OR_GREATER || NET5_0_OR_GREATER
