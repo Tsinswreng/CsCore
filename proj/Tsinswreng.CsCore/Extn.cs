@@ -44,6 +44,19 @@ public static class Extn{
 		}
 		return new List<T>(z);
 	}
+	
+	public static bool EqObj(
+		this obj? z,
+		obj? Other
+	){
+		if(z is null){
+			if(Other is null){
+				return true;
+			}
+			return false;
+		}
+		return z.Equals(Other);
+	}
 
 
 	/// Case sensitive
