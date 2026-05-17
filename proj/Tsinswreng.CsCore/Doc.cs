@@ -21,6 +21,8 @@ typst風格
  */
 [AttributeUsage(AttributeTargets.All, AllowMultiple =true)]
 [Conditional("COMPILE_TIME_ONLY")]
+/// substitute of doc comment.
+/// you can use `nameof` in `Summary`
 public partial class Doc : Attribute{
 	public str? Summary{get;set;}
 	public Doc(str Summary){

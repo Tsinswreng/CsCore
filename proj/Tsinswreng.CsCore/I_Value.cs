@@ -32,8 +32,6 @@ public partial interface IDictSerializable
 /// 自封裝之值類型需叶斯接口、㕥便序列化時免包一層{"Value": xxx}
 public partial interface I_ValueObj{
 	public obj? ValueObj{get;set;}
-#if NETSTANDARD2_1_OR_GREATER || NETCOREAPP3_0_OR_GREATER || NET5_0_OR_GREATER
-#endif
 }
 
 
