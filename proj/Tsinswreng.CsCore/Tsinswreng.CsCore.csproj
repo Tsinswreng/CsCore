@@ -1,13 +1,21 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
 
 	<PropertyGroup>
 		<OutputType>Library</OutputType>
-
+		<PackageId>Tsinswreng.CsCore</PackageId>
+		<Version>0.0.1-alpha</Version>
+		<Authors>Tsinswreng</Authors>
+		<Description>Minimal C# core abstractions including type aliases, lightweight attributes, value-object interfaces, and small utility extensions.</Description>
+		<PackageTags>CSharp;Core;ValueObject;Extensions;Attributes</PackageTags>
+		<PackageReadmeFile>README.md</PackageReadmeFile>
 	</PropertyGroup>
 
 	<ItemGroup>
 		<Compile Include="../TypeAlias.cs" />
 	</ItemGroup>
 
+	<ItemGroup>
+		<None Include="..\..\README.md" Pack="true" PackagePath="\" />
+	</ItemGroup>
 
 </Project>
