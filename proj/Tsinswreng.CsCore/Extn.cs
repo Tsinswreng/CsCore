@@ -96,6 +96,18 @@ public static class Extn {
 		return z.Equals(o);
 	}
 
+	public static bool IsNullOrDefault<T>(this T? z)
+		where T:struct, IEquatable<T>
+	{
+		return z is null || z.Value.Equals(default(T));
+	}
+
+	public static bool IsNullOrDefault<T>(this T z)
+		where T:struct, IEquatable<T>
+	{
+		return z.Equals(default(T));
+	}
+
 #if NET5_0_OR_GREATER
 	extension<T>(IAsyncEnumerable<T> z){
 		[Doc(@$"Get an empty `IAsyncEnumerable<T>`")]
